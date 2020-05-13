@@ -5,10 +5,8 @@ MAINTAINER perambluate
 #ARG HOME=/home/t2
 ARG MPIDIR=/opt
 ARG APPDIR=/root
-ARG HOST_MPI_DIR=mpi
-ARG HOST_APP_DIR=benchmark
 ARG INTEL_SN=intel_sn
-ARG HOST_MODULEFILES_DIR=modulefiles
+ARG HOST_MODULEFILES_DIR=../modulefiles
 ENV DEBIAN_FRONTEND=noninteractive
 
 # use bash as shell
