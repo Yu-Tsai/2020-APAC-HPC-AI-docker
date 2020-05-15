@@ -41,6 +41,7 @@ RUN cd ${MPIDIR} && \
         ./install.sh --silent silent.cfg && \
         rm ${MPIDIR}/${INTEL_SN}
 
+# module file and root ssh permition
 COPY ${HOST_MODULEFILES_DIR} ${APPDIR}/modulefiles
 RUN source /etc/profile.d/modules.sh && \
         module use ${APPDIR}/modulefiles && \
