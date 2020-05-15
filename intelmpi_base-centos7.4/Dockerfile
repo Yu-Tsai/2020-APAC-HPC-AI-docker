@@ -13,19 +13,27 @@ ENV DEBIAN_FRONTEND=noninteractive
 # use bash as shell
 SHELL ["/bin/bash", "-c"]
 
-# apt
-RUN apt update -y && \
-        apt install -y --reinstall systemd iptables && \
-        apt install -y \
-        gcc g++ gfortran make cmake wget git ssh tcl python3 vim locate bash-completion\
-        net-tools iputils-ping iproute2 curl \
-        environment-modules \
-        libnss3 libgtk2.*common libpango-1* libasound2* xserver-xorg cpio \
-        libgtk-3-dev libssl-dev linux-headers-4.11.0-14-generic \
-        autoconf automake \
-        libibverbs-dev libatlas3-base \
-        numactl libnuma-dev \
-        tcl-dev tk-dev mesa-common-dev libjpeg-dev libtogl-dev
+# yum
+RUN yum update -y && yum install -y mlocate git \
+               python3 curl \
+               bc tree svn gcc gcc-c++ \
+               vim net-tools wget make \
+               pciutils gtk2 atk cairo \
+               gcc-gfortran tcsh lsof \
+               nfs-utils automake autoconf \
+               tcl tcl-devel tk cmake \
+               kernel-devel-3.10.0-1062.9.1.el7.x86_64 \
+               kernel-devel-3.10.0-1062.el7.x86_64 \
+               yum-utils \
+               device-mapper-persistent-data \
+               lvm2 \
+               libuuid-devel \
+               libseccomp-devel \
+               squashfs-tools \
+               alsa-lib \
+               gettext-devel \
+               environment-modules
+
 
 # intel
 COPY ${INTEL_SN} ${MPIDIR}
