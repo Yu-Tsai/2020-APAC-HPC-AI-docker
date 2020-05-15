@@ -6,7 +6,7 @@ MAINTAINER perambluate
 ARG MPIDIR=/opt
 ARG APPDIR=/root
 ARG INTEL_SN=intel_sn
-ARG HOST_MPI_TAR_DIR=../parallel_studio_xe_2020_cluster_edition.tgz
+ARG HOST_MPI_TAR_FILE=../parallel_studio_xe_2020_cluster_edition.tgz
 ARG HOST_MODULEFILES_DIR=../modulefiles
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -29,7 +29,7 @@ RUN apt update -y && \
 
 # intel
 COPY ${INTEL_SN} ${MPIDIR}
-COPY ${HOST_MPI_TAR_DIR} ${MPIDIR}
+COPY ${HOST_MPI_TAR_FILE} ${MPIDIR}
 RUN cd ${MPIDIR} && \
         tar zxvf parallel_studio_xe_2020_cluster_edition.tgz && \
         rm parallel_studio_xe_2020_cluster_edition.tgz && \
