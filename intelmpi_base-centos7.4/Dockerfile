@@ -7,7 +7,7 @@ ARG MPIDIR=/opt
 ARG APPDIR=/root
 ARG INTEL_SN=intel_sn
 ARG HOST_MPI_TAR_FILE=parallel_studio_xe_2020_cluster_edition.tgz
-ARG HOST_MODULEFILES_DIR=../modulefiles
+ARG HOST_MODULEFILES_DIR=modulefiles
 ENV DEBIAN_FRONTEND=noninteractive
 
 # use bash as shell
