@@ -33,7 +33,7 @@ RUN yum update -y && yum install -y mlocate git \
                alsa-lib \
                gettext-devel \
                environment-modules
-
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 # intel
 COPY ${INTEL_SN} ${MPIDIR}
