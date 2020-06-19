@@ -6,7 +6,7 @@ proc ModulesHelp { } {
 
 module-whatis       "Sets up the Intel(R) compiler environment"
 
-set                topdir                 /opt/intel/compilers_and_libraries_2020.0.166/linux
+set                topdir                 /opt/intel/compilers_and_libraries_2018.5.274/linux
 prepend-path        PATH                   $topdir/bin:$topdir/bin/intel64
 prepend-path        LD_LIBRARY_PATH        $topdir/compiler/lib/intel64_lin
 setenv             MANPATH                /opt/intel/man/common
