@@ -8,7 +8,7 @@ module-whatis       "Sets up the Intel(R) MPI Library environment"
 
 conflict        mpi
 
-set                topdir                 /opt/intel/compilers_and_libraries_2020.0.166
+set                topdir                 /opt/intel/compilers_and_libraries_2018.5.274
 setenv             I_MPI_ROOT             $topdir/linux/mpi
 prepend-path        CLASSPATH              $topdir/linux/mpi/intel64/lib/mpi.jar
 prepend-path        PATH                   $topdir/linux/mpi/intel64/bin
